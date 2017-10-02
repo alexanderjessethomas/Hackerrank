@@ -22,9 +22,9 @@ public class BirthdayCakeCandles {
             }
         }
         
-        //for loop to count the number of candles shorter than the tallest
+        //for loop to count the number of candles same height as the tallest
         for(int j = 0; j < n; j++){
-            if(ar[j] < max){
+            if(ar[j] == max){
                 result++;
             }
         }
