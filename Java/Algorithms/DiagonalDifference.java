@@ -13,24 +13,20 @@ Print the absolute difference between the two sums of the matrix's diagonals as 
 import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class DiagonalDifference {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-		
-		//Scanner to read in input 
+        //Take in input 
         Scanner scan = new Scanner(System.in); 
-		//read in integers entered 
+        //parse input into integer value to be used later
         final int number = Integer.parseInt(scan.nextLine()); 
-		//variable to to store the differnce once calculated 
+        //make variable to hold value desired
         int diagonalDifference = 0; 
-		
-		//for loop for going through the matrix
+        //for loop to go through and calculate the diagonal difference 
         for(int i = 0; i < number;i++){
             String[]row = scan.nextLine().split(" ");
             diagonalDifference += (Integer.parseInt(row[i])-Integer.parseInt(row[number-1-i]));
         }
-		//printout diagonal difference 
         System.out.println(Math.abs(diagonalDifference));
         
     }
